@@ -77,11 +77,10 @@
                    (take star-count (filtered-locs (star-loc-seq)
                                                    star-separation)))
         full-mst (mst stars)
-        ;; mst-count (Math/floor (* 0.8 star-count))
-        ;; partial-msts (repeatedly 3 #(mst (take mst-count
-        ;;                                        (sort-by (fn [_] (rand)) stars))))
-        ;; edge-ids (distinct (apply concat full-mst partial-msts))
-        edge-ids full-mst
+        mst-count (Math/floor (* 0.8 star-count))
+        partial-msts (repeatedly 1 #(mst (take mst-count
+                                               (sort-by (fn [_] (rand)) stars))))
+        edge-ids (distinct (apply concat full-mst partial-msts))
         edges (map (fn [id star-ids] {:id id
                                       :owner :NA
                                       :stars (into #{} star-ids)})
