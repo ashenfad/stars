@@ -48,8 +48,7 @@
       (let [[s1 s2] (:stars edge)
             [x1 y1] (:location (star-map s1))
             [x2 y2] (:location (star-map s2))
-            alpha 0.25 ;; (max 0.08 (- 0.4 (* (:until-bid edge) 0.08)))
-            ]
+            alpha (max 0.08 (- 0.4 (* (:until-bid edge) 0.08)))]
         (-> (canvas/begin-path! context)
             (canvas/stroke-style! (canvas/paint white alpha))
             (canvas/move-to! x1 y1)
@@ -148,7 +147,7 @@
 
 (defn create! [canvas-id]
   (swap! scene assoc
-         :game (game-gen/create :stars 40)
+         :game (game-gen/create :stars 20)
          :transform (transform/create)
          :zoom 1
          :canvas (dom/get-element canvas-id)
