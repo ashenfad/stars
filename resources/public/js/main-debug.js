@@ -27457,7 +27457,7 @@ mogul.star_map.create = function create(star_count) {
   }, cljs.core.range.call(null, star_count), cljs.core.take.call(null, star_count, mogul.star_map.filtered_locs.call(null, mogul.star_map.star_loc_seq.call(null), mogul.star_map.star_separation)));
   var mst_count__8228 = Math.floor.call(null, 0.7 * star_count);
   var full_mst__8229 = mogul.star_map.mst.call(null, stars__8227);
-  var partial_msts__8230 = cljs.core.repeatedly.call(null, 2, function() {
+  var partial_msts__8230 = cljs.core.repeatedly.call(null, 1, function() {
     return mogul.star_map.mst.call(null, cljs.core.take.call(null, mst_count__8228, cljs.core.sort_by.call(null, function(_) {
       return cljs.core.rand.call(null)
     }, stars__8227)))
