@@ -28532,7 +28532,7 @@ mogul.ui.scene.draw_game_BANG_ = function draw_game_BANG_(context, game) {
       var vec__5413__5420 = "\ufdd0'location".call(null, star_map__5399.call(null, s2__5416));
       var x2__5421 = cljs.core.nth.call(null, vec__5413__5420, 0, null);
       var y2__5422 = cljs.core.nth.call(null, vec__5413__5420, 1, null);
-      var alpha__5423 = 0.08 > 0.4 - "\ufdd0'until-bid".call(null, edge__5409) * 0.08 ? 0.08 : 0.4 - "\ufdd0'until-bid".call(null, edge__5409) * 0.08;
+      var alpha__5423 = 0.25;
       mogul.ui.canvas.stroke_BANG_.call(null, mogul.ui.canvas.close_path_BANG_.call(null, mogul.ui.canvas.line_to_BANG_.call(null, mogul.ui.canvas.move_to_BANG_.call(null, mogul.ui.canvas.stroke_style_BANG_.call(null, mogul.ui.canvas.begin_path_BANG_.call(null, context), mogul.ui.canvas.paint.call(null, white__5400, alpha__5423)), x1__5418, y1__5419), x2__5421, y2__5422)));
       var temp__3698__auto____5424 = cljs.core.next.call(null, G__5407__5410);
       if(cljs.core.truth_(temp__3698__auto____5424)) {

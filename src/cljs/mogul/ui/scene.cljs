@@ -48,7 +48,8 @@
       (let [[s1 s2] (:stars edge)
             [x1 y1] (:location (star-map s1))
             [x2 y2] (:location (star-map s2))
-            alpha (max 0.08 (- 0.4 (* (:until-bid edge) 0.08)))]
+            alpha 0.25 ;; (max 0.08 (- 0.4 (* (:until-bid edge) 0.08)))
+            ]
         (-> (canvas/begin-path! context)
             (canvas/stroke-style! (canvas/paint white alpha))
             (canvas/move-to! x1 y1)
